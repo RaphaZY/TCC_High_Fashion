@@ -129,38 +129,36 @@
     <!-- Nossos Produtos -->
     <section data-bs-version="5.1" class="pricing02 cid-umeacIuSzu" id="product-list-9-umeacIuSzu">
         <div class="container-fluid py-5" style="background-color: #EEF7FF;">
-            <div class="row justify-content-center">
-                <div class="col-12 content-head">
-                    <div class="mbr-section-head mb-5">
-                        <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                            <strong>NOSSOS PRODUTOS</strong>
-                        </h4>
-                    </div>
-                </div>
-            </div>
-            <div class="container mb-5">
-              <div class="row">
-                  {% for product in last_8_products %}
-                  <div class="item features-image col-12 col-md-6 col-lg-3 mb-3">
-                    <div class="item-wrapper " style="background-color: white; height: 100%;">
-                    <div class="item-img">
-                      <img src="{{ product.path.url }}" alt="Produto">
-                    </div>
-                    <div class="item-content p-3">
-                      <h4 class="item-title mbr-fonts-style text-center display-7">
-                        {{ product.name }}
+          <div class="row justify-content-center">
+              <div class="col-12 content-head">
+                  <div class="mbr-section-head mb-5">
+                      <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                          <strong>NOSSOS PRODUTOS</strong>
                       </h4>
-                      <hr>
-                      <p class="mbr-text mbr-fonts-style text-center display-8">{{ product.description }}</p>
-                      <div class="mbr-section-btn item-footer d-flex justify-content-center mt-auto">
-                        <a href="{% url 'product_single' product.id %}" class="btn item-btn btn-primary display-7">Ver mais</a>
-
+                  </div>
+              </div>
+          </div>
+          <div class="container mb-5">
+            <div class="row">
+                {% for product in last_8_products %}
+                <div class="item features-image col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="item-wrapper" style="background-color: white; display: flex; flex-direction: column; height: 100%;">
+                      <div class="item-img mb-3" style="height: 400px; overflow: hidden;">
+                        <img src="{{ product.path.url }}" alt="Produto" style="width: 100%; height: 100%; object-fit: cover;">
+                      </div>
+                      <div class="item-content p-3" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                          <div>
+                            <h4 class="item-title mbr-fonts-style text-center display-7">{{ product.name }}</h4>
+                            <p class="mbr-text mbr-fonts-style text-center display-8">{{ product.description }}</p>
+                          </div>
+                          <div class="mbr-section-btn item-footer d-flex justify-content-center mt-3">
+                            <a href="{% url 'product_single' product.id %}" class="btn item-btn btn-primary display-7">Ver mais</a>
+                          </div>
                       </div>
                     </div>
-                  </div>
-                  </div>
-                  {% endfor %}
-              </div>
+                </div>
+                {% endfor %}
+            </div>
           </div>
         </div>
     </section>

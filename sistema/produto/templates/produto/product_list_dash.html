@@ -78,19 +78,19 @@
 
       {% endfor %}
     </div>
-    <nav aria-label="Page navigation example">
-      <ul class="pagination d-flex justify-content-center">
-          {% if products.has_previous %}
-              <li class="page-item"><a class="page-link" href="?page={{ products.previous_page_number }}">Anterior</a></li>
-              <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
-          {% endif %}
-          <li class="page-item active"><a class="page-link" href="#">{{ products.number }}</a></li>
-          {% if products.has_next %}
-              <li class="page-item"><a class="page-link" href="?page={{ products.paginator.num_pages }}">{{ products.paginator.num_pages }}</a></li>
-              <li class="page-item"><a class="page-link" href="?page={{ products.next_page_number }}">Próxima</a></li>
-          {% endif %}
-      </ul>
-  </nav>  
+      <nav aria-label="Page navigation example">
+        <ul class="pagination d-flex justify-content-center">
+            {% if products.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{ products.previous_page_number }}">Anterior</a></li>
+                <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+            {% endif %}
+            <li class="page-item active"><a class="page-link" href="#">{{ products.number }}</a></li>
+            {% if products.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ products.paginator.num_pages }}">{{ products.paginator.num_pages }}</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ products.next_page_number }}">Próxima</a></li>
+            {% endif %}
+        </ul>
+      </nav>
   </div>
 </section>
 
